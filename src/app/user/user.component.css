@@ -1,0 +1,32 @@
+    body{
+        margin:0;
+        padding:0;
+    }
+    table{
+    margin: 20px;
+    }
+    .user-list{
+        margin: 0;
+    }
+    h2{
+        text-align: center;
+        /* background-color: aqua; */
+        margin-top: 0;
+    }
+    
+    table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    }
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    }
+    
+    th {
+    background-color: #f2f2f2;
+    }
+    
