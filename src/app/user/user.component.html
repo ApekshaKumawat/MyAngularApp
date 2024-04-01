@@ -1,28 +1,24 @@
-<body>
 <div class="user-list">
-    <h2>Users</h2>
-    <table>
+  <table>
     <thead>
     <tr>
-    <th>ID</th>
-    <th>Name</th>
+    <th>Profile</th>
+    <th>Id</th>
     <th>UserName</th>
     <th>Action</th>
     </tr>
     </thead>
     <tbody>
     @for(user of users; track user){
-    <tr > 
-        <td >{{ user.id }}</td>
-        <td>{{ user.name }}</td>
+    <tr>
+         <td><div class="profile">GR</div></td> 
+        <td>{{ user.id }}</td>
         <td>{{ user.username }}</td>
-        <td><button [routerLink]="'/user-card'">View Details</button></td>
+        <td><input type="button" class="btn btn-primary" (click)="viewDetails(user.id)" value="View Details" ></td>
     </tr>
     }
     </tbody>
-    </table>
-   </div>
-   
-   
-</body>
+   </table>
+</div>
+
     
