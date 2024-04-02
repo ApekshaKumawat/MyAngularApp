@@ -19,7 +19,6 @@ constructor(private userService: UserService, private router: Router) {}
 
   viewDetails(id: number) {
     this.router.navigate(['user-card', id]);
-    console.log(id);
   }
 
   users: User[] = [];
