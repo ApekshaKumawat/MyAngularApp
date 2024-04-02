@@ -3,7 +3,7 @@
     <span>Home</span>
 </div>
 <div class="card mb-3" style="max-width: 500px;">    
-    <div class="col-md-8">
+    <div class="col-md-8 mb-3">
       <div class="card-body"> 
         <div class="horizontal">
           <div class="col">
@@ -15,9 +15,11 @@
         <div class="card-text"> <i class="fa-solid fa-location-dot"></i> : {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}, {{user.address.geo.lat}}, {{user.address.geo.lng}}</div>
         <div class="card-text"> <i class="fa-solid fa-phone"></i> : {{user.phone}}</div>
         <div class="card-text"> <i class="fa-solid fa-globe"></i> : <a href="{{user.website}}">{{user.website}}</a></div>
-        <div class="card-text"> Company : {{user.company.name}}</div>
-        <div class="card-text"> <i class="fa-solid fa-quote-left"></i> {{user.company.catchPhrase}}<i class="fa-solid fa-quote-right"></i></div>
-        <div class="card-text"> {{user.company.bs}}</div>
+        <hr/>
+        <div class="section">Professional Details </div>
+          <div class="card-text"> Company : {{user.company.name}}</div>
+          <div class="card-text"> <i class="fa-solid fa-quote-left"></i> {{user.company.catchPhrase}} <i class="fa-solid fa-quote-right"></i></div>
+          <div class="card-text"> {{user.company.bs}}</div>
       </div>
     </div> 
 </div>

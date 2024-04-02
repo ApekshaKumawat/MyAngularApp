@@ -1,22 +1,33 @@
+@if(isLoading){
+<div style="text-align: center; font-size: xx-large; color: grey">
+  Loading...
+</div>
+}@else{
 <div class="user-list">
   <table>
     <thead>
-    <tr>
-    <th>Id</th>
-    <th>UserName</th>
-    <th>Action</th>
-    </tr>
+      <tr>
+        <th>Id</th>
+        <th>UserName</th>
+        <th>Action</th>
+      </tr>
     </thead>
     <tbody>
-    @for(user of users; track user){
-    <tr>
+      @for(user of users; track user){
+      <tr>
         <td>{{ user.id }}</td>
         <td>{{ user.username }}</td>
-        <td><input type="button" class="btn btn-primary" (click)="viewDetails(user.id)" value="View Details" ></td>
-    </tr>
-    }
+        <td>
+          <input
+            type="button"
+            class="btn btn-primary"
+            (click)="viewDetails(user.id)"
+            value="View Details"
+          />
+        </td>
+      </tr>
+      }
     </tbody>
-   </table>
+  </table>
 </div>
-
-    
+}
