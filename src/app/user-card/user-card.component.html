@@ -1,13 +1,23 @@
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
+<div class="home" (click)="goback()">
+    <i class="fa-solid fa-house"></i>
+    <span>Home</span>
+</div>
+<div class="card mb-3" style="max-width: 500px;">    
     <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{ user.name | uppercase }} </h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="card-body"> 
+        <div class="horizontal">
+          <div class="col">
+            <h5 class="card-title">{{ user.name | uppercase }} </h5>
+            <div class="user-name">{{ user.username}}</div>
+          </div>
+        </div>
+        <div class="card-text"><i class="fa-solid fa-envelope"></i> : {{user.email}}</div>
+        <div class="card-text"> <i class="fa-solid fa-location-dot"></i> : {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}, {{user.address.geo.lat}}, {{user.address.geo.lng}}</div>
+        <div class="card-text"> <i class="fa-solid fa-phone"></i> : {{user.phone}}</div>
+        <div class="card-text"> <i class="fa-solid fa-globe"></i> : <a href="{{user.website}}">{{user.website}}</a></div>
+        <div class="card-text"> Company : {{user.company.name}}</div>
+        <div class="card-text"> <i class="fa-solid fa-quote-left"></i> {{user.company.catchPhrase}}<i class="fa-solid fa-quote-right"></i></div>
+        <div class="card-text"> {{user.company.bs}}</div>
       </div>
     </div> 
-  </div>
 </div>

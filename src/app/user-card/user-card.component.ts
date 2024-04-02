@@ -2,17 +2,24 @@ import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../user.interface';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../user.service';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-card',
   standalone: true,
-  imports: [CommonModule ],
+  imports: [CommonModule],
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.css',
 })
 
 export class UserCardComponent implements OnInit{
+
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router){}
+
+  goback() {
+    this.router.navigate(['/']);
+  }
+  
     // name: any;
     // private createInitials():void {
     //   let initials = this.name.charAt(0).toUpperCase();
@@ -22,8 +29,6 @@ export class UserCardComponent implements OnInit{
     // users: User[] =[];
     
     user: any = '';
-    
-    constructor(private userService: UserService, private route: ActivatedRoute){}
 
     ngOnInit():void{
       this.getUserById();

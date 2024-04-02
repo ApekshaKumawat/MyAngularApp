@@ -4,6 +4,9 @@ export interface User{
     "username": string
     "email": string
     "address":address
+    "phone": string
+    "website": string
+    "company": company
 }
 
 export interface address{
@@ -18,3 +21,11 @@ export interface geo{
     "lat": string
     "lng": string 
 }
+
+
+export interface company{
+    "name": string
+    "catchPhrase": string
+    "bs": string
+}
+   
