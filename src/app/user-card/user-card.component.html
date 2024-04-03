@@ -1,25 +1,48 @@
 <div class="home" (click)="goback()">
-    <i class="fa-solid fa-house"></i>
-    <span>Home</span>
+  <i class="fa-solid fa-house"></i>
+  <span id="home">Home</span>
 </div>
-<div class="card mb-3" style="max-width: 500px;">    
-    <div class="col-md-8 mb-3">
-      <div class="card-body"> 
-        <div class="horizontal">
-          <div class="col">
-            <h5 class="card-title">{{ user.name | uppercase }} </h5>
-            <div class="user-name">{{ user.username}}</div>
-          </div>
+<div class="card mb-3" style="max-width: 500px">
+  <div class="col-md-8 mb-3">
+    <div class="card-body">
+      <div class="horizontal">
+        <div class="col">
+          <h5 class="card-title">{{ user.name | uppercase }}</h5>
+          <div class="card-title user-name">{{ user.username }}</div>
         </div>
-        <div class="card-text"><i class="fa-solid fa-envelope"></i> : {{user.email}}</div>
-        <div class="card-text"> <i class="fa-solid fa-location-dot"></i> : {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}, {{user.address.geo.lat}}, {{user.address.geo.lng}}</div>
-        <div class="card-text"> <i class="fa-solid fa-phone"></i> : {{user.phone}}</div>
-        <div class="card-text"> <i class="fa-solid fa-globe"></i> : <a href="{{user.website}}">{{user.website}}</a></div>
-        <hr/>
-        <div class="section">Professional Details </div>
-          <div class="card-text"> Company : {{user.company.name}}</div>
-          <div class="card-text"> <i class="fa-solid fa-quote-left"></i> {{user.company.catchPhrase}} <i class="fa-solid fa-quote-right"></i></div>
-          <div class="card-text"> {{user.company.bs}}</div>
       </div>
-    </div> 
+      <hr />
+      <div class="section">Personal Details</div>
+      <div class="card-text">
+        <i class="fa-solid fa-envelope"></i> :
+        <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+      </div>
+      <div class="card-text">
+        <i class="fa-solid fa-location-dot"></i> : {{ user.address.street }},
+        {{ user.address.suite }}, {{ user.address.city }},
+        {{ user.address.zipcode }}, {{ user.address.geo.lat }},
+        {{ user.address.geo.lng }}
+      </div>
+      <div class="card-text">
+        <i class="fa-solid fa-phone"></i> : {{ user.phone }}
+      </div>
+      <div class="card-text">
+        <i class="fa-solid fa-globe"></i> :
+        <a href="/">{{ user.website }}</a>
+      </div>
+      <hr />
+      <div class="section">Professional Details</div>
+      <div class="card-text">
+        <span class="title">Company : </span>{{ user.company.name }}
+      </div>
+      <div class="card-text">
+        <span class="title">CatchPhrase : </span
+        ><i class="fa-solid fa-quote-left"></i>{{ user.company.catchPhrase }}
+        <i class="fa-solid fa-quote-right"></i>
+        <div class="card-text">
+          <span class="title">bs : </span>{{ user.company.bs }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

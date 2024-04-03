@@ -1,16 +1,28 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 
 .home {
+  width: fit-content;
   color: rgb(105, 102, 102);
   cursor: pointer;
+  margin-left: 10%;
   margin-bottom: 10px;
+  font-weight: 700;
 }
-
-.fa-solid {
-  color: rgb(105, 102, 102);
+.home:hover {
+  border: none;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+  text-decoration: underline;
+}
+#home:hover {
+  text-shadow: 2px 2px 4px rgb(168, 163, 163);
+}
+.fa-house {
+  margin-right: 5px;
 }
 .card {
   border-radius: 30px;
+  border: none;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
@@ -19,21 +31,13 @@
   line-height: 40px;
 }
 
-.profile {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 1px solid mediumblue;
-  font-size: 30px;
-  color: mediumblue;
-  text-align: center;
-  line-height: 70px;
-  margin: 20px 0;
-}
-
 .user-name {
   font-style: italic;
   margin: auto;
+}
+
+.card-text a {
+  text-decoration: none;
 }
 
 .card-title {
@@ -49,7 +53,14 @@
 
 .mb-3 {
   margin: auto;
+  margin-bottom: 3rem !important;
 }
 
 .section {
+  font-weight: 700;
+}
+
+.title {
+  color: rgb(24, 23, 23);
+  font-weight: 500;
 }

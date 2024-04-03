@@ -38,4 +38,5 @@ tr {
 }
 tr:hover {
   box-shadow: 2px 8px 2px 2px rgba(90, 112, 119, 0.2);
+  cursor: pointer;
 }

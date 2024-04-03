@@ -9,22 +9,13 @@
       <tr>
         <th>Id</th>
         <th>UserName</th>
-        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       @for(user of users; track user){
-      <tr>
+      <tr (click)="viewDetails(user.id)">
         <td>{{ user.id }}</td>
         <td>{{ user.username }}</td>
-        <td>
-          <input
-            type="button"
-            class="btn btn-primary"
-            (click)="viewDetails(user.id)"
-            value="View Details"
-          />
-        </td>
       </tr>
       }
     </tbody>
